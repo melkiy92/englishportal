@@ -23,7 +23,7 @@ public class EnWordController {
 
 
     @GetMapping("/en-words/{id}")
-    public EnWordDTO sayHello(@PathVariable Long id) {
+    public EnWordDTO getEnWordById(@PathVariable Long id) {
         EnWord enWord = enWordService.getEnWord(id);
         return enWordMapper.toDTO(enWord);
     }

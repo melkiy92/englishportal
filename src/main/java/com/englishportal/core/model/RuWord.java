@@ -8,7 +8,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name = "en_words")
+@Table(name = "ru_words")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"meaning"})
