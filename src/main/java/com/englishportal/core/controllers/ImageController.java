@@ -23,9 +23,8 @@ public class ImageController {
     private final ImageService imageService;
     private final ImageMapper imageMapper;
 
-
     @GetMapping("/images/{id}")
-    public ResponseEntity<?> getImage(@PathVariable Long id) throws IOException {
+    public ResponseEntity<?> getImage(@PathVariable Long id)  {
         Image image = imageService.getImage(id);
         return ResponseEntity.ok()
                 .header("fileName", image.getOriginalFilename())

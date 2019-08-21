@@ -24,12 +24,11 @@ public class CardController {
     private final CardService cardService;
     private final CardMapper cardMapper;
 
-
     @GetMapping("/cards/{id}")
     public ResponseEntity getCardById(@PathVariable Long id) throws IOException {
         Card card = cardService.getCard(id);
         CardDTO cardDTO = cardMapper.toDTO(card);
-        return new ResponseEntity(cardDTO, HttpStatus.OK);
+        return new ResponseEntity<>(cardDTO, HttpStatus.OK);
         //return cardMapper.toDTO(card);
     }
 
@@ -40,23 +39,5 @@ public class CardController {
         cardDTO = cardMapper.toDTO(card);
         return new ResponseEntity<>(cardDTO, HttpStatus.CREATED);
     }
-/*
-    private UserDTO toDTO (User user) {
-        Set<RoleDTO> roleDTOS = toDTOs(user.getRoles());
-        return UserDTO.builder()
-                .id(user.getId())
-                .email(user.getEmail())
-                .roles(roleDTOS)
-                .build();
-    }
-    private Set<RoleDTO> toDTOs (Set<Role> role) {
-        return role.stream().map(role1 -> toDTO(role1)).collect(Collectors.toSet());
-    }
-    private RoleDTO toDTO(Role role) {
-        return RoleDTO.builder()
-                .id(role.getId())
-                .name(role.getName())
-                .build();
-    }*/
 
 }
