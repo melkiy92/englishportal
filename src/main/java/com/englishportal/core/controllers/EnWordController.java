@@ -1,13 +1,9 @@
 package com.englishportal.core.controllers;
 
 import com.englishportal.core.dto.EnWordDTO;
-import com.englishportal.core.dto.UserDTO;
 import com.englishportal.core.mappers.EnWordMapper;
-import com.englishportal.core.mappers.UserMapper;
 import com.englishportal.core.model.EnWord;
-import com.englishportal.core.model.User;
-import com.englishportal.core.services.EnWordService;
-import com.englishportal.core.services.UserService;
+import com.englishportal.core.services.servicesInterfaces.EnWordService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

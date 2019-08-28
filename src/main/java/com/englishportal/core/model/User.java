@@ -17,6 +17,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String name;
+
     private String email;
     private String password;
 
@@ -31,6 +34,7 @@ public class User {
         roles.add(role);
         role.getUsers().add(this);
     }
+
     public void removeRole(Role role) {
         roles.remove(role);
         role.getUsers().remove(this);

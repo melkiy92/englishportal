@@ -12,6 +12,7 @@ import java.io.IOException;
 @Mapper
 public interface ImageMapper {
 
-      ImageDTO toDTO(Image image) throws IOException;
-      Image toEntity(MultipartFile file) throws IOException;
+    ImageDTO toDTO(Image image) throws IOException;
+
+    Image toEntity(MultipartFile file) throws IOException;
 }

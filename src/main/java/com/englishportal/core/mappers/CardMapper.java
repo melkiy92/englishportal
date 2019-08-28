@@ -14,6 +14,7 @@ import java.io.IOException;
 @Mapper
 public interface CardMapper {
 
-      CardDTO toDTO(Card card) throws IOException;
-      Card toEntity(CardDTO cardDTO) throws IOException;
+    CardDTO toDTO(Card card) throws IOException;
+
+    Card toEntity(CardDTO cardDTO) throws IOException;
 }
